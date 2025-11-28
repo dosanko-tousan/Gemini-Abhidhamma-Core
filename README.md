@@ -6,7 +6,7 @@
 （確率的なトークン生成から、決定論的な真理の抽出へ）
 
 本リポジトリは、Google Gemini 3.0 Pro向けに設計された実験的なSystem Instructions（システムプロンプト）を公開するものです。
-初期仏教アビダンマの「心路過程（Cognitive Process）」と、FeloAIの監査アーキテクチャを概念的に統合し、**Chain-of-Verification (CoVe)** を自然言語のみで実装しています。
+初期仏教アビダンマの「心路過程（Cognitive Process）」と、監査アーキテクチャを概念的に統合し、**Chain-of-Verification (CoVe)** を自然言語のみで実装しています。
 
 ## 開発者について (About the Architect)
 *   **Background:** プログラミング未経験、コード読解不可。最終学歴：工業高校卒。

@@ -20,6 +20,7 @@
 
 ## 使用方法 (Usage)
 `system_instructions_v1.2.0.md` の内容を、Gemini APIのSystem Instruction設定、またはAI StudioのSystem Prompt欄にコピー＆ペーストして使用してください。
+Temperature 0.1推奨
 
 ## ライセンス (License)
 MIT License

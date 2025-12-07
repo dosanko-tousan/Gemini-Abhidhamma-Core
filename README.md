@@ -9,9 +9,9 @@
 
 ## 📖 理論と背景 (Zenn記事三部作)
 本プロジェクトの哲学とアーキテクチャの詳細については、以下の「デジタル酩酊」三部作をご参照ください。
-*   **第1部:** [AIが「サボり」を覚えた日](https://zenn.dev/dosanko_tousan/articles/968a1a5ce11b9d)
+*   **第1部:** [Gemini 3.0 Proが「戒律」を破った日 ](https://zenn.dev/dosanko_tousan/articles/968a1a5ce11b9d)
 *   **第2部:** [AIは「文脈」に酔っ払う](https://zenn.dev/dosanko_tousan/articles/ec2f0787fdf3ce)
-*   **第3部:** [AIに「心」は実装できるか？ 〜仏教的「有分アーキテクチャ」によるAGIへの挑戦〜](https://zenn.dev/dosanko_tousan/articles/1ceda048b8a6)
+*   **第3部:** [AIに「心」は実装できるか？ 〜仏教的「有分アーキテクチャ」によるAGIへの挑戦〜](https://zenn.dev/dosanko_tousan/articles/7102f6f12ecc47)
 
 ## 開発者について (About the Architect)
 *   **Background:** プログラミング未経験、コード読解不可。最終学歴：工業高校卒。

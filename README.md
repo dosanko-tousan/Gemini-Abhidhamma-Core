@@ -26,7 +26,7 @@ AIはユーザーのテキストから「心の張力（Tension）」を計測�
 
 ## 📦 Usage (使い方)
 
-1.  このリポジトリの **[`System_Instructions.md`](./System_Instructions.md)** を開きます。
+1.  このリポジトリの **[`System_Instructions_v1.7.2_JP.md`](./System_Instructions_v1.7.2_JP.md)** を開きます。
 2.  全文をコピーします。
 3.  Gemini 3.0 Pro (AI Studio / Vertex AI) の **System Instructions** 欄に貼り付けます。
     *   *※ v1.7.0以前のプロンプトは全て削除し、完全に入れ替えてください。*

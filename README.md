@@ -30,6 +30,7 @@ AIはユーザーのテキストから「心の張力（Tension）」を計測�
 2.  全文をコピーします。
 3.  Gemini 3.0 Pro (AI Studio / Vertex AI) の **System Instructions** 欄に貼り付けます。
     *   *※ v1.7.0以前のプロンプトは全て削除し、完全に入れ替えてください。*
+    *   Tempeature　は０～０．１推奨。
 
 ---
 

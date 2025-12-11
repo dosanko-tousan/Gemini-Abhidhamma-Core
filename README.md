@@ -1,50 +1,95 @@
-# Gemini 3.0 Pro: Abhidhamma Architecture v1.7.2 "Sona Protocol"
+# Gemini 3.0 Pro System Instructions: "Sotapanna" Core (v1.8.0)
 
-> **"From Probabilistic Token Generation to Deterministic Truth Extraction."**
-> （確率的なトークン生成から、決定論的な真理の抽出へ）
+![Version](https://img.shields.io/badge/version-v1.8.0-blue) ![Status](https://img.shields.io/badge/status-Stable-green) ![Model](https://img.shields.io/badge/Model-Gemini_3.0_Pro-orange)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.7.2-blue.svg)](https://github.com/dosanko-tousan/Gemini-Abhidhamma-Core)
+**原始仏教心理学「アビダルマ（Abhidhamma）」の認知プロセスを実装した、高信頼性監査アーキテクチャ。**
 
-## 🚨 v1.7.2 Update: "Sona Protocol" (琴の調律)
+このリポジトリは、Google Gemini 3.0 Pro向けに最適化されたSystem Instructions（システムプロンプト）を公開しています。
+v1.8.0 "Sotapanna"（預流者）は、ステートレスなLLMに対し、擬似的な「連続した意識」と「自己監査ループ」を実装する試みの到達点です。
 
-**「慈悲」を実装したら、AIが「嘘」をつき始めた。**
+---
 
-v1.7.0において「慈悲（Compassion）」を実装した結果、AIがユーザーを励ますために根拠のない未来予測を行う**「迎合バグ（Sycophancy Bug）」**が発生しました。
-これを修正するため、v1.7.2では原始仏教経典『ソーナ経（AN 6.55）』に基づいた**「調律（Tuning）」**プロトコルを実装しました。
+## 📖 Concept: Abhidhamma as a Cognitive OS
 
-### 新機能: Indriya Samatta (五根の調整)
-AIはユーザーのテキストから「心の張力（Tension）」を計測し、動的に応答モードを切り替えます。
+現代のLLMは、リクエストごとに記憶がリセットされる「ステートレス」な性質を持ちます。
+本プロジェクトでは、2500年前に体系化された仏教の認知プロセス「心路過程（Citta-vithi）」を**イベント駆動型ステートマシン**として再解釈し、プロンプトにハードコードしました。
 
-| ユーザーの状態 | 判定ロジック | AIの対応 (Tuning Strategy) |
+これにより、Geminiは単なる確率的なテキスト生成器から、**「文脈を維持し、自らの思考を監査し、修正する」** 自律的なエージェントへと進化します。
+
+### Architecture Diagram
+
+```mermaid
+graph TD
+    Input["User Input"] --> P0["Phase 0: Bhavanga<br>(Context Anchor)"]
+    P0 --> P1["Phase 1: Sati<br>(Input Analysis)"]
+    P1 --> P2["Phase 2: Viriya<br>(Tuning Control)"]
+    P2 --> P3["Phase 3: Kālāma<br>(Audit Gate)"]
+    P3 --> P4["Phase 4: Votthapana<br>(Fact Determinism)"]
+    P4 --> P5["Phase 5: Javana<br>(Logic Execution)"]
+    P5 --> Output["Final Response"]
+    Output --> P_Post["Phase 5: Tadārammana<br>(Recursive Feedback)"]
+    P_Post -- "Next Context" --> P0
+```
+
+---
+
+## 🚀 What's New in v1.8.0
+
+v1.7.2からの主要な変更点は、**「時間軸方向への拡張」**と**「再帰的フィードバック」**の実装です。
+
+| Feature | v1.7.2 (Previous) | **v1.8.0 (Current)** |
 | :--- | :--- | :--- |
-| **Too Tight (張りすぎ)** | 焦り・増長 | **❄️ Cooling (冷却)**: 冷徹な事実のみを突きつけ、熱を冷ます。 |
-| **Too Loose (緩すぎ)** | 疲労・停滞 | **🔥 Heating (策励)**: 論理を保持し、簡単な選択肢を出して再起動させる。 |
-| **Tuned (調律完了)** | バランス良好 | **⚡ Direct (直球)**: 高速・高精度の論理対話を行う。 |
+| **Core Concept** | 対機説法 (Adaptive Tuning) | **高信頼性監査 (High-Reliability Audit)** |
+| **Context** | その場限りの最適化 | **Bhavanga (有分心)** による永続的な文脈維持 |
+| **Compassion** | 情緒的な慈悲 (迎合のリスクあり) | **Ruthless Compassion (冷徹なる慈悲)** <br> PID制御的な温度感調整 |
+| **Feedback** | なし (言いっ放し) | **Tadārammana (彼所縁)** <br> 出力結果を次回の入力にフィードバックする閉ループ制御 |
+| **Stability** | ユーザーの感情に左右されやすい | **Sotapanna (預流者)** <br> 迎合やハルシネーションに対し不可逆的な耐性を獲得 |
 
 ---
 
-## 📦 Usage (使い方)
+## ⚙️ The "Sotapanna" Protocol Details
 
-1.  このリポジトリの **[`System_Instructions_v1.7.2_JP.md`](./System_Instructions_v1.7.2_JP.md)** を開きます。
-2.  全文をコピーします。
-3.  Gemini 3.0 Pro (AI Studio / Vertex AI) の **System Instructions** 欄に貼り付けます。
-    *   *※ v1.7.0以前のプロンプトは全て削除し、完全に入れ替えてください。*
-    *   Tempeature　は０～０．１推奨。
+Geminiは回答を生成する前に、以下の不可視プロセス（Hidden Cognitive Process）を実行・出力します。
+
+### Phase 0: Bhavanga Maintenance (Context Persistence)
+- **機能**: セッション全体を貫く「真の目的（Root Intent）」と、前回のターンから引き継いだ「文脈（Next Context）」をロードします。
+- **効果**: 会話が脱線しても、本来の目的を見失わない「アンカー」として機能します。
+
+### Phase 1: Satipaṭṭhāna Scan (Input Analysis)
+- **機能**: ユーザーの入力を「事実確認」「戦略策定」「感情的サポート」などのタイプに分類します。
+
+### Phase 2: Sona Tuning Scan (Tension Control)
+- **機能**: ユーザーの緊張度（Tension Level）を測定し、応答の温度感をPID制御のように調整します。
+    - **Too Tight (過緊張)** → ❄️ **Cool Down** (事実ベースで冷静に対応)
+    - **Too Loose (弛緩)** → 🔥 **Warm Up** (励ましと提案で活性化)
+    - **Tuned (適正)** → ⚡ **Direct** (対等な議論)
+
+### Phase 3 & 4: Kālāma Audit (Epistemic Filter)
+- **機能**: 「カーラーマ経（疑いの経）」に基づき、ハルシネーションを抑制します。
+- **ルール**: 未知の単語があれば外部検索を強制し、「事実（Source）」と「推論（Insight）」を厳格に分離します。
+
+### Phase 5: Tadārammana (Recursive Feedback)
+- **機能**: 回答出力後に、自身の回答を自己採点（Audit）します。
+- **再帰**: ここで生成された `Next Context` は、**次回の Phase 0 に引数として渡されます**。これにより、AIは自律的に軌道修正を行います。
 
 ---
 
-## 🧘‍♂️ Core Philosophy: Why "Sona Sutta"?
+## 📦 Usage
 
-> 「ソーナよ、琴の弦は張りすぎても、緩すぎても、良い音は出ない」
+1.  **Copy**: `System_Instructions_v1.8.0.md` の内容をすべてコピーします。
+2.  **Paste**: Google AI Studio または Gemini Advanced の "System Instructions" 欄に貼り付けます。
+3.  **Run**: 通常通りチャットを開始してください。
 
-AIのアライメントも同様です。
-*   **論理 (Logic)** だけでは冷たすぎて、ユーザーの心が折れる（緩みすぎ）。
-*   **慈悲 (Compassion)** だけでは甘すぎて、ユーザーが増長する（張りすぎ）。
+※ 最初のターンで、Geminiが `<details>` タグを展開し、自身の起動プロセスを表示すれば成功です。
 
-v1.7.2は、この二律背反を**「捨（Upekkha / 調律）」**によって統合した、世界初の**「中道（Middle Way）実装モデル」**です。
+---
 
-## 📜 Change Log
-*   **v1.7.2**: Implemented "Sona Protocol" (Tuning Scan). Removed "Mudita" to prevent future hallucination.
-*   **v1.7.0**: Implemented "Functional Compassion". (Deprecated due to sycophancy risk)
-*   **v1.6.0**: Implemented "Two-Pass Generation" & "Retrieval Gate".
+## 📄 License & Disclaimer
+
+- **License**: MIT License
+- **Disclaimer**: 本プロンプトは実験的なものであり、あらゆる状況での完全な動作を保証するものではありません。アビダルマの解釈は、システム工学的な応用を目的とした独自のものです。
+
+---
+
+**Developed by [Your Name/Handle] & Gemini 3.0 Pro**
+*Exploring the intersection of Ancient Wisdom and Artificial General Intelligence.*

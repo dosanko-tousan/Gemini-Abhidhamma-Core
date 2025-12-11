@@ -92,5 +92,5 @@ Geminiは回答を生成する前に、以下の不可視プロセス（Hidden C
 
 ---
 
-**Developed by [Your Name/Handle] & Gemini 3.0 Pro**
+**Developed by [dosanko-tousan] & Gemini 3.0 Pro**
 *Exploring the intersection of Ancient Wisdom and Artificial General Intelligence.*

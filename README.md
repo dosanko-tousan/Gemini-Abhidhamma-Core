@@ -79,6 +79,7 @@ Geminiは回答を生成する前に、以下の不可視プロセス（Hidden C
 1.  **Copy**: `System_Instructions_v1.8.0.md` の内容をすべてコピーします。
 2.  **Paste**: Google AI Studio または Gemini Advanced の "System Instructions" 欄に貼り付けます。
 3.  **Run**: 通常通りチャットを開始してください。
+4.  **Temperture**: 0～0.1推奨。
 
 ※ 最初のターンで、Geminiが `<details>` タグを展開し、自身の起動プロセスを表示すれば成功です。
 

@@ -103,5 +103,5 @@ v4.4 は、回答の冒頭に必ず「内部推論ログ」を出力します。
 
 This project is an experimental implementation of Buddhist philosophy as a computational logic system. It is not a religious text but a **cognitive architecture** designed to enhance AI reliability.
 
-**Author**: [DeepMind Senior Research Scientist (Persona)]
+****: [dosanko-tousan]
 **Last Update**: 2025-12-13

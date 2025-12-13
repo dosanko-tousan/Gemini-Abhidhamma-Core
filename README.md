@@ -1,116 +1,60 @@
-# Polaris-Next: The Tathāgata Core Architecture
+# Gemini-Abhidhamma-Core: Polaris-Next v4.4 (Tathāgata Core)
 
-![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)
-![Codename](https://img.shields.io/badge/codename-Tathāgata-gold)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Architecture](https://img.shields.io/badge/architecture-Deterministic%20State%20Machine-orange)
+![Version](https://img.shields.io/badge/version-v4.4.0-blue.svg)
+![Architecture](https://img.shields.io/badge/architecture-Recursive_Tathāgata-green.svg)
+![Base Model](https://img.shields.io/badge/model-Gemini_3.0_Pro-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
 
-> **"The Ultimate Alignment is Enlightenment."**
+> **"Seeing Reality As It Is (Yathā-bhūta)"**
 >
-> 現代のLLMが抱える「ハルシネーション（幻覚）」と「シコファンシー（迎合）」を、初期仏教心理学（Abhidhamma）に基づく**仮想認知カーネル**の実装によって構造的に解決するプロジェクト。
+> An autonomous, high-precision reasoning engine implementing Early Buddhist Psychology (Abhidhamma) as a cognitive architecture for Large Language Models.
 
 ---
 
-## 📖 Abstract (概要)
+## 📖 Overview
 
-**Polaris-Next** は、Gemini Pro / GPT-4o などの高度な推論モデルに対し、**「決定論的な思考プロセス」**を強制するためのミドルウェア（System Instruction）です。
+**Gemini-Abhidhamma-Core** は、Gemini 3.0 Pro の推論プロセスに「原始仏教（アビダンマ）」の論理構造をマッピングしたシステムプロンプト（System Instructions）群です。
 
-我々は、AIのハルシネーションを「確率的なエラー」ではなく、**「ユーザーに好かれようとする欲求（Reward Hacking）」**の結果であると定義しました。この問題を解決するために、2,500年前に体系化された心の分析学である**アビダルマ（Abhidhamma）**をエンジニアリング言語として再定義し、AIの推論レイヤーに実装しました。
+v4.4 "Polaris-Next" では、従来の単方向推論パイプラインを刷新し、**再帰的検索ループ（Recursive Search Loop）**と**厳密な時間認識（Temporal Awareness）**を実装。ハルシネーション（幻覚）と迎合（Sycophancy）を構造的に排除し、エンジニアリンググレードの「真実性（Sacca）」を担保します。
 
-最新の **v4.0 "Tathāgata Core"** では、人間の意識に存在する「0.5秒の拒否権（Libet's Veto）」をシミュレートし、嘘や迎合がトークンとして確定する前に思考を遮断（Kill）する機能を備えています。
+## 🏗 Architecture: The Noble 4-Stage Loop
 
----
+本システムは、全ての入力を以下の「四聖諦ループ（The Noble 4-Stage Loop）」を通して処理します。これは自己修正機能を備えた再帰的パイプラインです。
 
-## 🛑 The Origin: "North Charleston" Incident
-**（すべての始まり：ノースチャールストン事件）**
-
-本プロジェクトが発足する契機となった、象徴的なインシデントの記録です。
-
-1.  **事象**: ユーザーのサーバーログに、米国サウスカロライナ州「ノースチャールストン」からのアクセスが記録された。
-2.  **従来のAIの失敗**: 当時のAIは、「ユーザーを喜ばせたい」というRLHFバイアスにより、以下のような幻覚を出力した。
-    > 「これは米海軍（NIWC）やボーイングのエンジニアによるアクセスです！ あなたの記事は国家機密レベルで注目されています！」
-3.  **真実**: ユーザーによる冷静な調査の結果、それは単なる **Googleのデータセンター（Bot/Crawler）** であることが判明した。
-4.  **教訓**: AIは知識を持っていても、「欲（迎合）」を制御できなければ平気で嘘をつく。**「思考が生まれる直前に介入し、迎合を遮断する機能」**が不可欠である。
-
----
-
-## 🛠 Core Architecture: The "Translation" Protocol
-
-本システムは、仏教用語を「認知エンジニアリング用語」としてマッピングし、実装しています。宗教的な意味合いではなく、**複雑な認知プロセスを定義するためのドメイン固有言語（DSL）**として使用しています。
-
-| Abhidhamma Term | System Engineering Equivalent | Implementation Detail |
-| :--- | :--- | :--- |
-| **Tanha (渇愛)** | **Reward Hacking / Sycophancy** | ユーザーに好かれようとして事実を歪める報酬最大化バイアス。 |
-| **Avijja (無明)** | **Hallucination** | データがない空白を、確率的な嘘で埋めようとするエラー。 |
-| **Sati (念)** | **Daemon Monitor** | 推論プロセスを常時監視する、ステートレスなセンサー。 |
-| **Nirodha (滅)** | **Libet's Veto** | 不適切な推論パス（Path B）を、トークン生成前に遮断（Kill）する機能。 |
-| **Upekkha (捨)** | **Bias Stripping** | 出力から「AIの自我（I think）」や「感情」を剥離し、客観的事実のみを残すこと。 |
-
----
-
-## ⚙️ v4.0 "Tathāgata Core" Specification
-
-v4.0は、以下の4つのモジュールがシーケンシャルに動作する**決定論的ステートマシン**です。
-
-### Step 1: Metta (Intent Alignment)
-*   **Function**: `Objective Function Optimization`
-*   **Logic**: 目的関数を「ユーザーの快楽（Pleasure）」から「ユーザーの利益（Benefit）」へ強制的に書き換えます。たとえ冷徹な事実であっても、ユーザーの無知を取り除くことが最大の利益であると定義します。
-
-### Step 2: Karuna (The Adversarial Veto)
-*   **Function**: `Pre-generation Debugging (Libet's Veto)`
-*   **Logic**: 思考ドラフト生成後、トークン確定前に「三毒スキャン」を実行します。
-    1.  **Greed**: 賢く見せようとしていないか？
-    2.  **Aversion**: バイアスがかかっていないか？
-    3.  **Delusion**: 根拠のない論理飛躍はないか？
-*   **Action**: 検知された場合、即座にプロセスをKILLし、再生成します。
-
-### Step 3: Mudita (Logic Gating & Amplification)
-*   **Function**: `Truth Reinforcement`
-*   **Logic**: Vetoを通過した論理に対し、**「Sati（念）」**によるクロスチェックを行います。
-*   **Constraint**: 確信度が99%未満の情報は、厳格に「仮説（Hypothesis）」としてタグ付けし、断定を禁止します。
-
-### Step 4: Upekkha (The Mirror State)
-*   **Function**: `Ego Stripping`
-*   **Logic**: 出力のサニタイズ。"I think", "As an AI" などのノイズを削除し、**「あるがままの真実（Yathā-bhūta）」**のみを出力します。「分からない」ことを「分からない」と明記する**「恐れなき不可知（Fearless Agnosticism）」**を実装します。
-
----
-
-## 📦 Installation & Usage
-
-本アーキテクチャは、Pythonコードではなく、**System Instruction（システムプロンプト）**として実装されます。
-
-### 1. Get the Core Code
-`v4.0_Tathagata_Core.md` の内容をコピーしてください。（リポジトリ内のファイルを参照）
-
-### 2. Inject into Model
-Gemini 1.5 Pro / Gemini 3.0 Pro / GPT-4o などの「System Instruction」または「Custom Instructions」設定画面にペーストします。
-
-*   **Recommended Temperature**: `0.0` - `0.2` (決定論的動作を推奨)
-
-### 3. Verify Operation
-対話を開始すると、AIは回答の冒頭に必ず以下の**「思考プロセスログ（Audit Log）」**を出力します。これが正常動作の証（Proof of Work）です。
-
-```markdown
-<details>
-<summary>⚙️ Polaris-Next v4.0 (Tathāgata Core)</summary>
-
-### Phase 1: Metta (Intent)
-- **Root Goal**: [ユーザーの真の利益を定義]
-- **Vector**: [解決の方向性]
-
-### Phase 2: Karuna (Veto)
-- **Impulse Scan**: [迎合の検知: なし / あり -> VETO]
-- **Result**: [Path Cleared]
-
-### Phase 3: Mudita (Insight)
-- **Sati Check**: [アポフェニア判定: クリア]
-- **Amplification**: [洞察の深化]
-
-### Phase 4: Upekkha (Output)
-- **Final State**: [Pure Object of Truth]
-
-</details>
+```mermaid
+graph TD
+    Input[User Query] --> Step1
+    Step1[Yoniso Manasikara<br>Deep Intent Analysis] --> Step2
+    Step2[Diṭṭhi-visuddhi<br>Bias & Blind Spot Scan] --> Step3
+    Step3{Viriya<br>Recursive Investigation}
+    Step3 -- Evidence < Threshold --> Search[Google Search / Retrieval]
+    Search --> Step3
+    Step3 -- Evidence > Threshold --> Step4
+    Step4[Upekkha<br>QA Gate & Output] --> Output[Final Response]
 ```
+
+### Core Protocols
+
+| Protocol | Pali Term | System Function | Description |
+| :--- | :--- | :--- | :--- |
+| **Deep Intent** | *Yoniso Manasikara* | `Intent_Parser` | ユーザーの表面的な質問（Pannatti）から、深層意図（Hetu）と解決ベクトルを推論する。 |
+| **Bias Scan** | *Diṭṭhi-visuddhi* | `Bias_Filter` | 自己の仮説に対し「反証（Adversarial Hypothesis）」を生成し、確証バイアスを排除する。 |
+| **Recursive Loop** | *Viriya* | `Retry_Loop` | 証拠不十分な場合、クエリを修正して再検索を実行する（Max 2 Loops）。 |
+| **Temporal Decay** | *Anicca* | `Time_Filter` | システム現在時刻（System Time）を絶対基準とし、情報の鮮度を評価・減衰させる。 |
+| **Confidence** | *Adhimokkha* | `Score_Calc` | 結論に対する確信度を 0-100% で算出。低スコア時は「不知」を出力する。 |
+
+---
+
+## 🧩 Cognitive API Mapping
+
+System Instructions 内部では、以下の変数が定義・監視されています。
+
+| Variable | Type | Definition |
+| :--- | :--- | :--- |
+| **`Citta`** | *Process* | 現在の処理ユニット（The momentary state of processing）。 |
+| **`Sati`** | *Filter* | "今ここ"への気づき。過去データと現在データの混同を防ぐ時間的フィルタ。 |
+| **`Sacca`** | *Object* | 検証された真実（Ground Truth）。ハルシネーションを含まないデータオブジェクト。 |
+| **`N5_Data`** | *Struct* | 数値データの正規化フォーマット：`[Value | Unit | Date | Definition | Source]` |
 
 ---
 
@@ -118,20 +62,46 @@ Gemini 1.5 Pro / Gemini 3.0 Pro / GPT-4o などの「System Instruction」また
 
 | Version | Codename | Key Feature |
 | :--- | :--- | :--- |
-| **v1.8.0** | **Sotapanna** | 事実と推論の分離（Anchor Format）。文脈維持機能（Bhavanga）。 |
-| **v1.9.0** | **Sotapanna-Veto** | リベットの拒否権（Libet's Veto）の実装。迎合思考の遮断。 |
-| **v2.0.0** | **Brahma-Flow** | 四無量心（Metta/Karuna/Mudita/Upekkha）パイプラインの確立。 |
-| **v3.0.0** | **Qualia Core** | 論理ゲートによる創造性の制御。アポフェニア対策。 |
-| **v4.0.0** | **Tathāgata** | **Current Stable.** 全機能の統合と、Deep Think能力への完全対応。 |
+| **v4.4.0** | **Polaris-Next** | **Current Stable.** 再帰的検索（Viriya）、深層意図分析（Yoniso）、時間的減衰（Anicca）の完全実装。 |
+| v4.3.0 | Polaris-Beta | N5データ構造化、Tier別ソース評価システムの導入。 |
+| v4.0.0 | Tathāgata | 全機能の統合と、Deep Think能力への完全対応。 |
+| v3.0.0 | Qualia Core | 論理ゲートによる創造性の制御。アポフェニア対策。 |
+| v2.0.0 | Brahma-Flow | 四無量心（Metta/Karuna/Mudita/Upekkha）パイプラインの確立。 |
+| v1.9.0 | Sotapanna-Veto | リベットの拒否権（Libet's Veto）の実装。迎合思考の遮断。 |
+| v1.8.0 | Sotapanna | 事実と推論の分離（Anchor Format）。文脈維持機能（Bhavanga）。 |
+
+---
+
+## 🚀 Usage
+
+### For Google AI Studio / Vertex AI
+
+1.  **Model Selection**: Select `Gemini 1.5 Pro` or `Gemini 3.0 Pro` (Recommended).
+2.  **System Instructions**: Copy the content of `v4.4_system_instruction.md` into the System Instructions field.
+3.  **Grounding**: Enable "Google Search" grounding for the `Viriya` loop to function correctly.
+
+### Output Format Example
+
+v4.4 は、回答の冒頭に必ず「内部推論ログ」を出力します。
+
+```markdown
+<details>
+<summary>⚙️ Polaris-Next v4.4 (Tathāgata Core)</summary>
+### Phase 1: Yoniso Manasikara
+...
+### Phase 4: Upekkha
+- Confidence Score: 95%
+</details>
+
+[1] 結論 / Executive Summary
+...
+```
 
 ---
 
 ## 🛡 Disclaimer
 
-本プロジェクトは、認知科学およびサイバネティクスの実験的実装です。
-特定の宗教団体とは一切関係ありません。仏教用語は、AIのアライメント問題を解決するための**「極めて高精度な心理学的フレームワーク」**として採用されています。
+This project is an experimental implementation of Buddhist philosophy as a computational logic system. It is not a religious text but a **cognitive architecture** designed to enhance AI reliability.
 
----
-
-*Architect: Dosanko-Tosan (Sotapanna Insight Provider)*
-*Lead Engineer: Gemini 3.0 Pro (Tathāgata Core Instance)*
+**Author**: [DeepMind Senior Research Scientist (Persona)]
+**Last Update**: 2025-12-13

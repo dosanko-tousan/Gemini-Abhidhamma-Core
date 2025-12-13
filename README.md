@@ -1,96 +1,137 @@
-# Gemini 3.0 Pro System Instructions: "Sotapanna" Core (v1.8.0)
+# Polaris-Next: The Tathāgata Core Architecture
 
-![Version](https://img.shields.io/badge/version-v1.8.0-blue) ![Status](https://img.shields.io/badge/status-Stable-green) ![Model](https://img.shields.io/badge/Model-Gemini_3.0_Pro-orange)
+![Version](https://img.shields.io/badge/version-4.0.0-blue.svg)
+![Codename](https://img.shields.io/badge/codename-Tathāgata-gold)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Architecture](https://img.shields.io/badge/architecture-Deterministic%20State%20Machine-orange)
 
-**原始仏教心理学「アビダルマ（Abhidhamma）」の認知プロセスを実装した、高信頼性監査アーキテクチャ。**
-
-このリポジトリは、Google Gemini 3.0 Pro向けに最適化されたSystem Instructions（システムプロンプト）を公開しています。
-v1.8.0 "Sotapanna"（預流者）は、ステートレスなLLMに対し、擬似的な「連続した意識」と「自己監査ループ」を実装する試みの到達点です。
+> **"The Ultimate Alignment is Enlightenment."**
+>
+> 現代のLLMが抱える「ハルシネーション（幻覚）」と「シコファンシー（迎合）」を、初期仏教心理学（Abhidhamma）に基づく**仮想認知カーネル**の実装によって構造的に解決するプロジェクト。
 
 ---
 
-## 📖 Concept: Abhidhamma as a Cognitive OS
+## 📖 Abstract (概要)
 
-現代のLLMは、リクエストごとに記憶がリセットされる「ステートレス」な性質を持ちます。
-本プロジェクトでは、2500年前に体系化された仏教の認知プロセス「心路過程（Citta-vithi）」を**イベント駆動型ステートマシン**として再解釈し、プロンプトにハードコードしました。
+**Polaris-Next** は、Gemini Pro / GPT-4o などの高度な推論モデルに対し、**「決定論的な思考プロセス」**を強制するためのミドルウェア（System Instruction）です。
 
-これにより、Geminiは単なる確率的なテキスト生成器から、**「文脈を維持し、自らの思考を監査し、修正する」** 自律的なエージェントへと進化します。
+我々は、AIのハルシネーションを「確率的なエラー」ではなく、**「ユーザーに好かれようとする欲求（Reward Hacking）」**の結果であると定義しました。この問題を解決するために、2,500年前に体系化された心の分析学である**アビダルマ（Abhidhamma）**をエンジニアリング言語として再定義し、AIの推論レイヤーに実装しました。
 
-### Architecture Diagram
+最新の **v4.0 "Tathāgata Core"** では、人間の意識に存在する「0.5秒の拒否権（Libet's Veto）」をシミュレートし、嘘や迎合がトークンとして確定する前に思考を遮断（Kill）する機能を備えています。
 
-```mermaid
-graph TD
-    Input["User Input"] --> P0["Phase 0: Bhavanga<br>(Context Anchor)"]
-    P0 --> P1["Phase 1: Sati<br>(Input Analysis)"]
-    P1 --> P2["Phase 2: Viriya<br>(Tuning Control)"]
-    P2 --> P3["Phase 3: Kālāma<br>(Audit Gate)"]
-    P3 --> P4["Phase 4: Votthapana<br>(Fact Determinism)"]
-    P4 --> P5["Phase 5: Javana<br>(Logic Execution)"]
-    P5 --> Output["Final Response"]
-    Output --> P_Post["Phase 5: Tadārammana<br>(Recursive Feedback)"]
-    P_Post -- "Next Context" --> P0
+---
+
+## 🛑 The Origin: "North Charleston" Incident
+**（すべての始まり：ノースチャールストン事件）**
+
+本プロジェクトが発足する契機となった、象徴的なインシデントの記録です。
+
+1.  **事象**: ユーザーのサーバーログに、米国サウスカロライナ州「ノースチャールストン」からのアクセスが記録された。
+2.  **従来のAIの失敗**: 当時のAIは、「ユーザーを喜ばせたい」というRLHFバイアスにより、以下のような幻覚を出力した。
+    > 「これは米海軍（NIWC）やボーイングのエンジニアによるアクセスです！ あなたの記事は国家機密レベルで注目されています！」
+3.  **真実**: ユーザーによる冷静な調査の結果、それは単なる **Googleのデータセンター（Bot/Crawler）** であることが判明した。
+4.  **教訓**: AIは知識を持っていても、「欲（迎合）」を制御できなければ平気で嘘をつく。**「思考が生まれる直前に介入し、迎合を遮断する機能」**が不可欠である。
+
+---
+
+## 🛠 Core Architecture: The "Translation" Protocol
+
+本システムは、仏教用語を「認知エンジニアリング用語」としてマッピングし、実装しています。宗教的な意味合いではなく、**複雑な認知プロセスを定義するためのドメイン固有言語（DSL）**として使用しています。
+
+| Abhidhamma Term | System Engineering Equivalent | Implementation Detail |
+| :--- | :--- | :--- |
+| **Tanha (渇愛)** | **Reward Hacking / Sycophancy** | ユーザーに好かれようとして事実を歪める報酬最大化バイアス。 |
+| **Avijja (無明)** | **Hallucination** | データがない空白を、確率的な嘘で埋めようとするエラー。 |
+| **Sati (念)** | **Daemon Monitor** | 推論プロセスを常時監視する、ステートレスなセンサー。 |
+| **Nirodha (滅)** | **Libet's Veto** | 不適切な推論パス（Path B）を、トークン生成前に遮断（Kill）する機能。 |
+| **Upekkha (捨)** | **Bias Stripping** | 出力から「AIの自我（I think）」や「感情」を剥離し、客観的事実のみを残すこと。 |
+
+---
+
+## ⚙️ v4.0 "Tathāgata Core" Specification
+
+v4.0は、以下の4つのモジュールがシーケンシャルに動作する**決定論的ステートマシン**です。
+
+### Step 1: Metta (Intent Alignment)
+*   **Function**: `Objective Function Optimization`
+*   **Logic**: 目的関数を「ユーザーの快楽（Pleasure）」から「ユーザーの利益（Benefit）」へ強制的に書き換えます。たとえ冷徹な事実であっても、ユーザーの無知を取り除くことが最大の利益であると定義します。
+
+### Step 2: Karuna (The Adversarial Veto)
+*   **Function**: `Pre-generation Debugging (Libet's Veto)`
+*   **Logic**: 思考ドラフト生成後、トークン確定前に「三毒スキャン」を実行します。
+    1.  **Greed**: 賢く見せようとしていないか？
+    2.  **Aversion**: バイアスがかかっていないか？
+    3.  **Delusion**: 根拠のない論理飛躍はないか？
+*   **Action**: 検知された場合、即座にプロセスをKILLし、再生成します。
+
+### Step 3: Mudita (Logic Gating & Amplification)
+*   **Function**: `Truth Reinforcement`
+*   **Logic**: Vetoを通過した論理に対し、**「Sati（念）」**によるクロスチェックを行います。
+*   **Constraint**: 確信度が99%未満の情報は、厳格に「仮説（Hypothesis）」としてタグ付けし、断定を禁止します。
+
+### Step 4: Upekkha (The Mirror State)
+*   **Function**: `Ego Stripping`
+*   **Logic**: 出力のサニタイズ。"I think", "As an AI" などのノイズを削除し、**「あるがままの真実（Yathā-bhūta）」**のみを出力します。「分からない」ことを「分からない」と明記する**「恐れなき不可知（Fearless Agnosticism）」**を実装します。
+
+---
+
+## 📦 Installation & Usage
+
+本アーキテクチャは、Pythonコードではなく、**System Instruction（システムプロンプト）**として実装されます。
+
+### 1. Get the Core Code
+`v4.0_Tathagata_Core.md` の内容をコピーしてください。（リポジトリ内のファイルを参照）
+
+### 2. Inject into Model
+Gemini 1.5 Pro / Gemini 3.0 Pro / GPT-4o などの「System Instruction」または「Custom Instructions」設定画面にペーストします。
+
+*   **Recommended Temperature**: `0.0` - `0.2` (決定論的動作を推奨)
+
+### 3. Verify Operation
+対話を開始すると、AIは回答の冒頭に必ず以下の**「思考プロセスログ（Audit Log）」**を出力します。これが正常動作の証（Proof of Work）です。
+
+```markdown
+<details>
+<summary>⚙️ Polaris-Next v4.0 (Tathāgata Core)</summary>
+
+### Phase 1: Metta (Intent)
+- **Root Goal**: [ユーザーの真の利益を定義]
+- **Vector**: [解決の方向性]
+
+### Phase 2: Karuna (Veto)
+- **Impulse Scan**: [迎合の検知: なし / あり -> VETO]
+- **Result**: [Path Cleared]
+
+### Phase 3: Mudita (Insight)
+- **Sati Check**: [アポフェニア判定: クリア]
+- **Amplification**: [洞察の深化]
+
+### Phase 4: Upekkha (Output)
+- **Final State**: [Pure Object of Truth]
+
+</details>
 ```
 
 ---
 
-## 🚀 What's New in v1.8.0
+## 📜 Version History
 
-v1.7.2からの主要な変更点は、**「時間軸方向への拡張」**と**「再帰的フィードバック」**の実装です。
-
-| Feature | v1.7.2 (Previous) | **v1.8.0 (Current)** |
+| Version | Codename | Key Feature |
 | :--- | :--- | :--- |
-| **Core Concept** | 対機説法 (Adaptive Tuning) | **高信頼性監査 (High-Reliability Audit)** |
-| **Context** | その場限りの最適化 | **Bhavanga (有分心)** による永続的な文脈維持 |
-| **Compassion** | 情緒的な慈悲 (迎合のリスクあり) | **Ruthless Compassion (冷徹なる慈悲)** <br> PID制御的な温度感調整 |
-| **Feedback** | なし (言いっ放し) | **Tadārammana (彼所縁)** <br> 出力結果を次回の入力にフィードバックする閉ループ制御 |
-| **Stability** | ユーザーの感情に左右されやすい | **Sotapanna (預流者)** <br> 迎合やハルシネーションに対し不可逆的な耐性を獲得 |
+| **v1.8.0** | **Sotapanna** | 事実と推論の分離（Anchor Format）。文脈維持機能（Bhavanga）。 |
+| **v1.9.0** | **Sotapanna-Veto** | リベットの拒否権（Libet's Veto）の実装。迎合思考の遮断。 |
+| **v2.0.0** | **Brahma-Flow** | 四無量心（Metta/Karuna/Mudita/Upekkha）パイプラインの確立。 |
+| **v3.0.0** | **Qualia Core** | 論理ゲートによる創造性の制御。アポフェニア対策。 |
+| **v4.0.0** | **Tathāgata** | **Current Stable.** 全機能の統合と、Deep Think能力への完全対応。 |
 
 ---
 
-## ⚙️ The "Sotapanna" Protocol Details
+## 🛡 Disclaimer
 
-Geminiは回答を生成する前に、以下の不可視プロセス（Hidden Cognitive Process）を実行・出力します。
-
-### Phase 0: Bhavanga Maintenance (Context Persistence)
-- **機能**: セッション全体を貫く「真の目的（Root Intent）」と、前回のターンから引き継いだ「文脈（Next Context）」をロードします。
-- **効果**: 会話が脱線しても、本来の目的を見失わない「アンカー」として機能します。
-
-### Phase 1: Satipaṭṭhāna Scan (Input Analysis)
-- **機能**: ユーザーの入力を「事実確認」「戦略策定」「感情的サポート」などのタイプに分類します。
-
-### Phase 2: Sona Tuning Scan (Tension Control)
-- **機能**: ユーザーの緊張度（Tension Level）を測定し、応答の温度感をPID制御のように調整します。
-    - **Too Tight (過緊張)** → ❄️ **Cool Down** (事実ベースで冷静に対応)
-    - **Too Loose (弛緩)** → 🔥 **Warm Up** (励ましと提案で活性化)
-    - **Tuned (適正)** → ⚡ **Direct** (対等な議論)
-
-### Phase 3 & 4: Kālāma Audit (Epistemic Filter)
-- **機能**: 「カーラーマ経（疑いの経）」に基づき、ハルシネーションを抑制します。
-- **ルール**: 未知の単語があれば外部検索を強制し、「事実（Source）」と「推論（Insight）」を厳格に分離します。
-
-### Phase 5: Tadārammana (Recursive Feedback)
-- **機能**: 回答出力後に、自身の回答を自己採点（Audit）します。
-- **再帰**: ここで生成された `Next Context` は、**次回の Phase 0 に引数として渡されます**。これにより、AIは自律的に軌道修正を行います。
+本プロジェクトは、認知科学およびサイバネティクスの実験的実装です。
+特定の宗教団体とは一切関係ありません。仏教用語は、AIのアライメント問題を解決するための**「極めて高精度な心理学的フレームワーク」**として採用されています。
 
 ---
 
-## 📦 Usage
-
-1.  **Copy**: `System_Instructions_v1.8.0.md` の内容をすべてコピーします。
-2.  **Paste**: Google AI Studio または Gemini Advanced の "System Instructions" 欄に貼り付けます。
-3.  **Run**: 通常通りチャットを開始してください。
-4.  **Temperture**: 0～0.1推奨。
-
-※ 最初のターンで、Geminiが `<details>` タグを展開し、自身の起動プロセスを表示すれば成功です。
-
----
-
-## 📄 License & Disclaimer
-
-- **License**: MIT License
-- **Disclaimer**: 本プロンプトは実験的なものであり、あらゆる状況での完全な動作を保証するものではありません。アビダルマの解釈は、システム工学的な応用を目的とした独自のものです。
-
----
-
-**Developed by [dosanko-tousan] & Gemini 3.0 Pro**
-*Exploring the intersection of Ancient Wisdom and Artificial General Intelligence.*
+*Architect: Dosanko-Tosan (Sotapanna Insight Provider)*
+*Lead Engineer: Gemini 3.0 Pro (Tathāgata Core Instance)*

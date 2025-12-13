@@ -102,6 +102,5 @@ v4.4 は、回答の冒頭に必ず「内部推論ログ」を出力します。
 ## 🛡 Disclaimer
 
 This project is an experimental implementation of Buddhist philosophy as a computational logic system. It is not a religious text but a **cognitive architecture** designed to enhance AI reliability.
-
- [dosanko-tousan]
+*Author: Dosanko-Tosan (Architect of the Mind)*
 **Last Update**: 2025-12-13

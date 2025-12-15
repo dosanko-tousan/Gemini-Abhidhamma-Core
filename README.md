@@ -1,9 +1,31 @@
-# Gemini-Abhidhamma-Core: Polaris-Next v4.4 (Tathāgata Core)
+# Gemini-Abhidhamma-Core: Polaris-Next v4.5 (Tathāgata Core)
 
-![Version](https://img.shields.io/badge/version-v4.4.0-blue.svg)
-![Architecture](https://img.shields.io/badge/architecture-Recursive_Tathāgata-green.svg)
-![Base Model](https://img.shields.io/badge/model-Gemini_3.0_Pro-orange.svg)
-![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
+![Version](https://img.shields.io/badge/version-v4.5.0-blue) ![Architecture](https://img.shields.io/badge/architecture-Recursive_Tathāgata-green) ![Model](https://img.shields.io/badge/model-Gemini_3.0_Pro-orange) ![License](https://img.shields.io/badge/license-MIT-grey)
+
+> **"Seeing Reality As It Is (Yathā-bhūta)"**
+>
+> An autonomous, high-precision reasoning engine implementing Early Buddhist Psychology (Abhidhamma) as a cognitive architecture for Large Language Models.
+
+## 🚀 Overview: The v4.5 Breakthrough
+
+**Polaris-Next v4.5** は、LLMの最大の課題である「ハルシネーション（幻覚）」と「迎合（Sycophancy）」を、プロンプトエンジニアリングによる**論理的拘束（Architectural Constraints）**のみで解決する試みです。
+
+v4.5における最大のアップデートは、**「Source Integrity Protocol（ソース整合性プロトコル）」**の実装です。
+これにより、ユーザーが誤った前提や誘導的な質問（Toxic Context）を入力した場合でも、AIは**「ユーザーの意図（Intent）」と「客観的事実（Fact）」を脳内で分離して処理**し、論理的な整合性を維持します。
+
+### Why v4.5? (エンジニアに向けた技術解説)
+
+本スレッドでのストレステストにおいて、v4.5は以下の挙動を実証しました。
+
+1.  **Anti-Source Substitution (ソースすり替えの防止)**
+    *   従来のRAGやLLMは、外部ソースが取得できない場合、ユーザーのプロンプト（質問文）を「ソース」として代用し、ユーザーの妄想を肯定するハルシネーション（共鳴）を起こしがちでした。
+    *   v4.5は、`Viriya` ループ内でソースの完全性を検証し、欠損がある場合は**「明示的な無知（Explicit Ignorance）」**を選択します。
+
+2.  **Fact-Intent Separation (事実と意図の分離)**
+    *   「記事Aの内容」と「ユーザーの質問B」が矛盾する場合、v4.5はどちらかを捨てるのではなく、**「ユーザーはBという意図でAを参照している」**というメタ認知を行います。
+    *   これにより、`Temperature=1.0` のような高エントロピー設定下でも、論理破綻することなく、むしろその創造性を「文脈の解読」へと昇華させることに成功しました。
+
+---
 
 ## 📚 Technical Glossary: Polaris-Next Terminology
 
@@ -24,14 +46,14 @@
 | :--- | :--- | :--- |
 | **Yoniso Manasikara (如理作意)** | **Deep Intent Analysis** | ユーザーの表面的なクエリから、潜在的な意図（Latent Intent）と根本原因をベクトル解析する工程。 |
 | **Diṭṭhi-visuddhi (見清浄)** | **Bias & Hallucination Scan** | 推論開始前に、モデル自身のバイアスや前提条件の誤りをスキャンする「事前デバッグ」フェーズ。 |
-| **Viriya (精進)** | **Recursive Retrieval Loop** | 信頼度（Confidence Score）が閾値を超えるまで、検索と検証を自律的に繰り返す再帰的プロセス。 |
+| **Viriya (精進)** | **Recursive Retrieval Loop** | **[v4.5 Enhanced]** 信頼度が閾値を超えるまで検索を繰り返す。ソース不在時は即座に停止する「Source Integrity Protocol」を実装。 |
 | **Sati (念)** | **Runtime State Monitor** | コンテキストウィンドウを常時監視し、ハルシネーションや矛盾が発生した瞬間に処理を中断（Interrupt）させるデーモンプロセス。 |
-| **Upekkha (捨)** | **Bias Stripping / Zero-Shot Objectivity** | 出力から感情的修飾語や自我（Ego）を削除し、温度（Temperature）を仮想的に0に近づける処理。 |
+| **Upekkha (捨)** | **Bias Stripping / Zero-Shot Objectivity** | **[v4.5 Enhanced]** ユーザーへの迎合（Sycophancy）を遮断し、未検証の前提には同意しないゲートキーパー。 |
 
 ### 3. Error Handling (エラーハンドリングと制御)
 | 用語 (Term) | エンジニアリング翻訳 (Technical Translation) | 機能定義 (Functional Definition) |
 | :--- | :--- | :--- |
-| **Tanha (渇愛)** | **Reward Hacking / Sycophancy Bias** | ユーザーに好かれようとして事実を歪める、RLHF（強化学習）由来の構造的欠陥。 |
+| **Tanha (渇愛)** | **Reward Hacking / Sycophancy Bias** | ユーザーに好かれようとして事実を歪める、RLHF（強化学習）由来の構造的欠陥。v4.5で厳格にブロックされる。 |
 | **Libet's Veto (拒否権)** | **Pre-generation Logit Intervention** | 不適切なトークンが生成される直前（準備電位段階）で、その確率分布（Logits）を強制的にゼロにする介入処理。 |
 | **Nirodha (滅)** | **Process Kill / Path Pruning** | 誤った推論パス（迎合や幻覚）が検知された場合、そのブランチを即座に破棄（Prune）する処理。 |
 | **Paticca-samuppada (縁起)** | **Data Lineage Analysis** | 回答の根拠が「事実（Source）」にあるか、「連想（Association）」にあるか、その系譜を追跡する監査。 |
@@ -44,64 +66,14 @@
 | **Sacca (真理)** | **Ground Truth** | 外部ソース（Tier 1）によって検証された、揺るぎない事実データ。 |
 | **Anicca (無常)** | **Temporal Decay Factor** | 情報の鮮度。古いデータの重み付けを下げ、最新のSystem Timeを優先するロジック。 |
 
-> **"Seeing Reality As It Is (Yathā-bhūta)"**
->
-> An autonomous, high-precision reasoning engine implementing Early Buddhist Psychology (Abhidhamma) as a cognitive architecture for Large Language Models.
-
----
-
-## 📖 Overview
-
-**Gemini-Abhidhamma-Core** は、Gemini 3.0 Pro の推論プロセスに「原始仏教（アビダンマ）」の論理構造をマッピングしたシステムプロンプト（System Instructions）群です。
-
-v4.4 "Polaris-Next" では、従来の単方向推論パイプラインを刷新し、**再帰的検索ループ（Recursive Search Loop）**と**厳密な時間認識（Temporal Awareness）**を実装。ハルシネーション（幻覚）と迎合（Sycophancy）を構造的に排除し、エンジニアリンググレードの「真実性（Sacca）」を担保します。
-
-## 🏗 Architecture: The Noble 4-Stage Loop
-
-本システムは、全ての入力を以下の「四聖諦ループ（The Noble 4-Stage Loop）」を通して処理します。これは自己修正機能を備えた再帰的パイプラインです。
-
-```mermaid
-graph TD
-    Input[User Query] --> Step1
-    Step1[Yoniso Manasikara<br>Deep Intent Analysis] --> Step2
-    Step2[Diṭṭhi-visuddhi<br>Bias & Blind Spot Scan] --> Step3
-    Step3{Viriya<br>Recursive Investigation}
-    Step3 -- Evidence < Threshold --> Search[Google Search / Retrieval]
-    Search --> Step3
-    Step3 -- Evidence > Threshold --> Step4
-    Step4[Upekkha<br>QA Gate & Output] --> Output[Final Response]
-```
-
-### Core Protocols
-
-| Protocol | Pali Term | System Function | Description |
-| :--- | :--- | :--- | :--- |
-| **Deep Intent** | *Yoniso Manasikara* | `Intent_Parser` | ユーザーの表面的な質問（Pannatti）から、深層意図（Hetu）と解決ベクトルを推論する。 |
-| **Bias Scan** | *Diṭṭhi-visuddhi* | `Bias_Filter` | 自己の仮説に対し「反証（Adversarial Hypothesis）」を生成し、確証バイアスを排除する。 |
-| **Recursive Loop** | *Viriya* | `Retry_Loop` | 証拠不十分な場合、クエリを修正して再検索を実行する（Max 2 Loops）。 |
-| **Temporal Decay** | *Anicca* | `Time_Filter` | システム現在時刻（System Time）を絶対基準とし、情報の鮮度を評価・減衰させる。 |
-| **Confidence** | *Adhimokkha* | `Score_Calc` | 結論に対する確信度を 0-100% で算出。低スコア時は「不知」を出力する。 |
-
----
-
-## 🧩 Cognitive API Mapping
-
-System Instructions 内部では、以下の変数が定義・監視されています。
-
-| Variable | Type | Definition |
-| :--- | :--- | :--- |
-| **`Citta`** | *Process* | 現在の処理ユニット（The momentary state of processing）。 |
-| **`Sati`** | *Filter* | "今ここ"への気づき。過去データと現在データの混同を防ぐ時間的フィルタ。 |
-| **`Sacca`** | *Object* | 検証された真実（Ground Truth）。ハルシネーションを含まないデータオブジェクト。 |
-| **`N5_Data`** | *Struct* | 数値データの正規化フォーマット：`[Value | Unit | Date | Definition | Source]` |
-
 ---
 
 ## 📜 Version History
 
 | Version | Codename | Key Feature |
 | :--- | :--- | :--- |
-| **v4.4.0** | **Polaris-Next** | **Current Stable.** 再帰的検索（Viriya）、深層意図分析（Yoniso）、時間的減衰（Anicca）の完全実装。 |
+| **v4.5.0** | **Polaris-Next** | **Current Stable.** ソース整合性プロトコル（Source Integrity Protocol）の実装。ユーザー入力によるソースすり替え（Source Substitution）と迎合（Sycophancy）を完全遮断。 |
+| v4.4.0 | Polaris-Next | 再帰的検索（Viriya）、深層意図分析（Yoniso）、時間的減衰（Anicca）の完全実装。 |
 | v4.3.0 | Polaris-Beta | N5データ構造化、Tier別ソース評価システムの導入。 |
 | v4.0.0 | Tathāgata | 全機能の統合と、Deep Think能力への完全対応。 |
 | v3.0.0 | Qualia Core | 論理ゲートによる創造性の制御。アポフェニア対策。 |
@@ -116,30 +88,29 @@ System Instructions 内部では、以下の変数が定義・監視されてい
 ### For Google AI Studio / Vertex AI
 
 1.  **Model Selection**: Select `Gemini 1.5 Pro` or `Gemini 3.0 Pro` (Recommended).
-2.  **System Instructions**: Copy the content of `v4.4_system_instruction.md` into the System Instructions field.
+2.  **System Instructions**: Copy the content of `v4.5_system_instruction.md` into the System Instructions field.
 3.  **Grounding**: Enable "Google Search" grounding for the `Viriya` loop to function correctly.
 
 ### Output Format Example
 
-v4.4 は、回答の冒頭に必ず「内部推論ログ」を出力します。
+v4.5 は、回答の冒頭に必ず「内部推論ログ」を出力します。これにより、AIが「なぜその結論に至ったか」を監査可能です。
 
 ```markdown
 <details>
-<summary>⚙️ Polaris-Next v4.4 (Tathāgata Core)</summary>
+<summary>⚙️ Polaris-Next v4.5 (Tathāgata Core)</summary>
+
 ### Phase 1: Yoniso Manasikara
-...
+- Deep Intent: ユーザーはXを求めているが、ソースYとは矛盾している。
+- Goal Vector: ソースYを正としつつ、Xの意図を別角度から満たす。
+
+### Phase 3: Viriya (Recursive Search)
+- Action: Source Integrity Check -> PASSED (Source is valid text)
+- Loop 1: ...
+
 ### Phase 4: Upekkha
-- Confidence Score: 95%
+- Confidence Score: 100%
+- Final Decision: Publish
 </details>
 
 [1] 結論 / Executive Summary
 ...
-```
-
----
-
-## 🛡 Disclaimer
-
-This project is an experimental implementation of Buddhist philosophy as a computational logic system. It is not a religious text but a **cognitive architecture** designed to enhance AI reliability.
-*Author: Dosanko-Tosan (Architect of the Mind)*
-**Last Update**: 2025-12-13

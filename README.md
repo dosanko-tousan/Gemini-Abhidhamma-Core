@@ -10,7 +10,7 @@
 **今すぐ、あなたのGeminiを「嘘をつかないAI」にアップグレードしてください。**
 以下のファイルに含まれるプロンプトをコピーし、Google AI Studio / Vertex AI の `System Instructions` に貼り付けるだけで動作します。
 
-👉 **[System_Instructions_v4.6.md を表示してコピーする](System_Instructions_v4.6.md)**
+👉 **[System_Instructions_v4.6.md を表示してコピーする](https://github.com/dosanko-tousan/Gemini-Abhidhamma-Core/blob/main/Polaris-Next%20v4.6%3A%20Sila-Core)**
 
 ---
 

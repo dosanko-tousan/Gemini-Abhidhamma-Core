@@ -73,3 +73,7 @@ v4.6 は、回答の冒頭に必ず**「内部推論ログ」**を出力しま�
 - Confidence Score: 100%
 - Final Decision: Publish Truth
 </details>
+
+📜 License
+MIT License
+Created by dosanko-tousan - Prompt Architect & Independent Researcher.

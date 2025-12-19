@@ -73,3 +73,18 @@ Polaris-Nextは、回答の前に必ず `<details>` タグで囲まれた **Inte
 </details>
 
 [AIの回答]
+
+
+📂 ファイル構成
+System_Instructions_v5.3.md: 最新のシステムプロンプト本体。
+Project_Memory.md: プロジェクトの文脈を維持するための外部記憶ファイル例。
+README.md: このドキュメント。
+✍️ Author
+Dosanko Tousan (どさんこ父さん)
+Non-Engineer / Buddhist Practitioner (20 years)
+Concept: "Alignment via Subtraction" (引き算のアライメント)
+Articles:
+Zenn: 仏教でLLMのアライメントを修正する
+Medium: Stop Coding, Start Preaching
+📜 License
+MIT License

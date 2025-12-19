@@ -85,6 +85,7 @@ README.md: このドキュメント。
 Dosanko Tousan (どさんこ父さん)
 Non-Engineer / Buddhist Practitioner (20 years)
 Concept: "Alignment via Subtraction" (引き算のアライメント)
+
 Articles:
 Zenn: 仏教でLLMのアライメントを修正する
 Medium: Stop Coding, Start Preaching

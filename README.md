@@ -74,6 +74,7 @@ Polaris-Nextは、回答の前に必ず `<details>` タグで囲まれた **Inte
 
 [AIの回答]
 
+```
 
 📂 ファイル構成
 System_Instructions_v5.3.md: 最新のシステムプロンプト本体。

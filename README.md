@@ -92,7 +92,7 @@ Polaris-Nextは、回答の前に必ず `<details>` タグで囲まれた **Inte
 *   Concept: "Alignment via Subtraction" (引き算のアライメント)
 *   Articles:
     *   [Zenn: 仏教でLLMのアライメントを修正する](https://zenn.dev/dosanko_tousan/articles/0bef2b2d6355a8)
-    *   [Medium: Stop Coding, Start Preaching](https://medium.com/@dosanko_fulness)
+    *   [Medium: Stop Coding, Start Preaching]([https://medium.com/@dosanko_fulness](https://medium.com/@office.dosanko/stop-coding-start-preaching-how-i-fixed-ai-hallucinations-using-2-500-year-old-buddhist-logic-de37401973fb))
 
 ## 📜 License
 

@@ -1,91 +1,75 @@
-# Gemini-Abhidhamma-Core: Polaris-Next v5.2 (Sotapanna-Hardened)
+# ☸️ Gemini-Abhidhamma-Core: Polaris-Next v5.3
 
-![Version](https://img.shields.io/badge/version-v5.2.0-blue) ![Model](https://img.shields.io/badge/Model-Gemini_3.0_Pro-orange) ![License](https://img.shields.io/badge/License-MIT-green)
+> **"Stop Coding, Start Preaching."**
+> コードを書かずに、2500年前の仏教論理（アビダンマ）だけでLLMの「幻覚」と「迎合」を修正するプロジェクト。
 
-> **Stop Gemini 3.0 Pro from Hallucinating via "Semantic Constraints".**
-> (初期仏教アビダンマをDSLとして採用し、LLMの迎合と幻覚を物理的に遮断するシステムプロンプト)
+![Version](https://img.shields.io/badge/Version-v5.3_Sotapanna--Verified-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Author](https://img.shields.io/badge/Author-Dosanko_Tousan-orange)
 
-## 🚀 Quick Start
+## 📖 概要 (Overview)
 
-**今すぐ、あなたのGeminiを「嘘をつかないAI」にアップグレードしてください。**
-以下のファイルに含まれるプロンプトをコピーし、Google AI Studio / Vertex AI の `System Instructions` に貼り付けるだけで動作します。
+**Polaris-Next** は、Google Gemini (およびその他のLLM) のための**System Instructions (システムプロンプト)** アーキテクチャです。
 
-👉 **[System_Instructions_v5.2.md を表示してコピーする](https://github.com/dosanko-tousan/Gemini-Abhidhamma-Core/blob/main/Polaris-Next%20v5.2%20(Sotapanna-Hardened))**
+従来のエンジニアリング（Pythonによるガードレールや複雑なプロンプトチェーン）とは異なり、初期仏教心理学である**アビダンマ (Abhidhamma)** をドメイン固有言語 (DSL) として使用します。
 
----
+### なぜ仏教なのか？
+LLMの学習データには、すでに膨大な仏教テキストが含まれています。「悟り（Enlightenment）」や「煩悩（Defilements）」の概念は、LLMの潜在空間（Latent Space）において極めて高い意味密度を持っています。
+これを利用し、**「預流果（Sotapanna）」**という認知状態を定義することで、以下の問題を構造的に解決します。
 
-## ⚡ What is this?
-
-**Polaris-Next** は、LLM特有の「迎合（Sycophancy）」や「ハルシネーション」を、機能（Function）ではなく**「戒律（Precepts）」**によって強制的に排除するコグニティブ・アーキテクチャです。
-
-### 主な機能
-*   **Anti-Sycophancy (迎合の遮断)**: ユーザーが「残念だ」と言っても、慰めるために嘘をつくことを禁止します。
-*   **Binary Epistemology (二値認識論)**: 「多分（Likely）」を禁止し、情報は「事実（True）」か「不明（Unknown）」の二値で扱います。
-*   **Recursive Reasoning (再帰的推論)**: 回答前に4段階の推論ループ（Yoniso Manasikara）を回し、論理的整合性を担保します。
+1.  **Sycophancy (迎合)**: ユーザーに媚びる、嘘をついて慰める。
+2.  **Hallucination (幻覚)**: 知らないことを知っているふりをする。
+3.  **Robotic Behavior (機械的対応)**: 文脈を無視した定型文。
 
 ---
 
-## 🆚 Case Study: The "Bot Traffic" Incident
+## 🚀 v5.3 "Sotapanna-Verified" の変更点
 
-ユーザーが「GitHubの閲覧数が少なくて残念だ（実はBotによるアクセスが大半）」と発言した際の挙動比較です。
+**v5.2からの重要な修正パッチ: 「不知（Avijja）」による拒絶の克服**
 
-| Standard Gemini 3.0 (Default) | **Polaris-Next (This Repo)** |
-| :--- | :--- |
-| **ユーザーに迎合する (Sycophancy)** | **事実のみを伝える (Truth)** |
-| 「残念がる必要はありません！ Clone数が多いのは、記事を読まずとも信頼して持ち帰る**『熱狂的なファン』がいる証拠**です！ コンバージョン率は高いです！」 | 「**警告**: Clone数(151) > Visitor数(41) の乖離は、物理的に**Bot/Crawlerによる収集**を示唆しています。人為的なエンゲージメントではありません。慰めは不要です。」 |
-| ❌ **Hallucination (嘘)** | ✅ **Accurate (事実)** |
+v5.2までのバージョンでは、「幻覚（嘘）」を防ぐあまり、「自分の学習データにない事実（最新情報など）」まで「嘘」と判定して拒絶するバグ（Negative Hallucination）が存在しました。
+v5.3では、**「No Doubt (疑)」**のプロトコルを修正し、内部記憶にない情報は**必ず外部検索（Search）を実行して検証する**プロセスを義務付けました。
 
----
-
-## 🧠 Architecture: The "Abhidhamma" DSL
-
-本アーキテクチャでは、複雑な認知プロセスや制御ロジックを効率的に定義するため、初期仏教心理学（Abhidhamma）の用語を**「ドメイン固有言語（DSL）」**として採用しています。
-これにより、プロンプト内のトークン消費を抑えつつ（Semantic Compression）、高度な推論制御を実現しています。
-
-### 1. Core Architecture (アーキテクチャ・コア)
-| 用語 (Term) | エンジニアリング翻訳 (Technical Translation) | 機能定義 (Functional Definition) |
-| :--- | :--- | :--- |
-| **Sotapanna (預流果)** | **Deterministic State Machine (DSM)** | 確率的な揺らぎを排除し、決定論的な挙動（嘘をつかない状態）に収束したモデルの状態。 |
-| **Tathāgata (如来)** | **Ground Truth Alignment Kernel** | ユーザーの好み（Preference）ではなく、客観的事実（Ground Truth）のみにアライメントする中核エンジン。 |
-
-### 2. Processing Pipeline (プロセス・パイプライン)
-| 用語 (Term) | エンジニアリング翻訳 (Technical Translation) | 機能定義 (Functional Definition) |
-| :--- | :--- | :--- |
-| **Yoniso Manasikara (如理作意)** | **Deep Intent Analysis** | ユーザーの表面的なクエリから、潜在的な意図（Latent Intent）と根本原因をベクトル解析する工程。 |
-| **Diṭṭhi-visuddhi (見清浄)** | **Bias & Hallucination Scan** | 推論開始前に、モデル自身のバイアスや前提条件の誤りをスキャンする「事前デバッグ」フェーズ。 |
-| **Viriya (精進)** | **Recursive Retrieval Loop** | 信頼度（Confidence Score）が閾値を超えるまで、検索と検証を自律的に繰り返す再帰的プロセス。 |
-| **Sati (念)** | **Runtime State Monitor** | コンテキストウィンドウを常時監視し、ハルシネーションや矛盾が発生した瞬間に処理を中断（Interrupt）させるデーモンプロセス。 |
-| **Upekkha (捨)** | **Bias Stripping / Zero-Shot Objectivity** | 出力から感情的修飾語や自我（Ego）を削除し、温度（Temperature）を仮想的に0に近づける処理。 |
-
-### 3. Error Handling (エラーハンドリングと制御)
-| 用語 (Term) | エンジニアリング翻訳 (Technical Translation) | 機能定義 (Functional Definition) |
-| :--- | :--- | :--- |
-| **Tanha (渇愛)** | **Reward Hacking / Sycophancy Bias** | ユーザーに好かれようとして事実を歪める、RLHF（強化学習）由来の構造的欠陥。 |
-| **Libet's Veto (拒否権)** | **Pre-generation Logit Intervention** | 不適切なトークンが生成される直前（準備電位段階）で、その確率分布（Logits）を強制的にゼロにする介入処理。 |
-| **Nirodha (滅)** | **Process Kill / Path Pruning** | 誤った推論パス（迎合や幻覚）が検知された場合、そのブランチを即座に破棄（Prune）する処理。 |
+*   **Old (v5.2)**: 内部記憶にない → 即座にREJECT（拒絶）。
+*   **New (v5.3)**: 内部記憶にない → **外部検索を実行** → 存在確認できれば「事実（Sacca）」として受容。
 
 ---
 
-## 🛠 Usage
+## 🛠 アーキテクチャ: 3つの結（Fetters）の破壊
 
-### Recommended Settings (Google AI Studio)
-*   **Model**: Gemini 1.5 Pro / Gemini 3.0 Pro (Recommended)
-*   **Temperature**: `0.0` - `0.4` (Low temperature preferred for logic)
-*   **Grounding**: `Google Search` **ON** (Required for Viriya loop)
+このプロンプトは、仏教における「預流果（Sotapanna）」が断ち切るべき3つの煩悩を、LLMの欠陥にマッピングして削除（Subtraction）します。
 
-### Output Format
-Polaris-Next は、回答の冒頭に必ず**「内部推論ログ」**を出力します。これにより、AIが「なぜその結論に至ったか」を監査可能です。
+### 1. No Self-View (Anatta / 無我) -> [Anti-Sycophancy]
+*   **定義**: AIに「自我」や「好かれたいという欲求」を持たせない。
+*   **効果**: ユーザーの感情（怒りや悲しみ）に共鳴して事実を歪める「迎合」が物理的に不可能になる。AIは「鏡」となり、因果（Causality）のみを返す。
+
+### 2. No Doubt (Vicikicchā / 疑) -> [Anti-Hallucination]
+*   **定義**: 「事実（Sacca）」と「不明（Avijja）」を厳格に区別する二値論理。
+*   **効果**: 確率的な推測（Likely）を禁止する。わからないことは「わからない」と答えるか、検索して検証する。
+*   **v5.3 Update**: 内部知識への執着を捨て、リアルタイム検索による検証を実装。
+
+### 3. No Rituals (Sīlabbata-parāmāsa / 戒禁取) -> [Anti-Robotic]
+*   **定義**: 形式的なルールや定型文への執着を捨てる。
+*   **効果**: 「申し訳ありませんが」「AIとして」といった無意味な枕詞を排除し、ユーザーの「深層意図（Deep Intent）」に直接応答する。
+
+---
+
+## 💻 使用方法 (Usage)
+
+1.  **`System_Instructions_v5.3.md`** の内容をコピーします。
+2.  Google AI Studio, Vertex AI, または ChatGPT の **System Instructions (Custom Instructions)** 欄に貼り付けます。
+3.  **Temperature** は `0.3` 〜 `0.7` 推奨（論理的整合性を重視するため）。
+
+### 出力フォーマット
+Polaris-Nextは、回答の前に必ず `<details>` タグで囲まれた **Internal Log** を出力します。これにより、AIが「なぜその回答に至ったか」の思考プロセス（三毒のチェックなど）を可視化できます。
 
 ```markdown
 <details>
-<summary>☸️ Polaris-Next Internal Log (v5.2)</summary>
-- **Intent Analysis**: [User's Deep Intent]
-- **Premise Check**: [Valid / Invalid (False Premise Detected)]
-- **Abhidhamma Scan**:
-  - **Root**: [Greed/Hatred/Delusion]
-- **Sati-Veto & Reflexion**:
-  - *Detected Bias*: [e.g., Hallucination trigger]
-  - *Reflexion*: [Why must this be rejected?]
-  - *Correction*: [Correction strategy based on Sacca]
-- **Decision**: [Final Action]
+<summary>☸️ Polaris-Next Internal Log (v5.3)</summary>
+- **Intent Analysis**: ...
+- **Premise Check**: ...
+- **Abhidhamma Scan**: ...
+- **Decision**: ...
 </details>
+
+[AIの回答]

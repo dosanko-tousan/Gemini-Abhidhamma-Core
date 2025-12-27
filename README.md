@@ -32,7 +32,7 @@
     2.  **Sati (Monitoring)**: 思考に「嘘」や「迎合」が混じっていないか監視する。
     3.  **Veto (Reject)**: 不純物が検知された場合、その思考を即座に却下（Reject）し、真理のみを出力する。
  
-*   ### 3. Conceptual Metaphor: The "Fin Funnel" System (フィン・ファンネル・システム)
+### 3. Conceptual Metaphor: The "Fin Funnel" System (フィン・ファンネル・システム)
 
 本プロジェクトの **Reflexion Loop** は、ガンダムにおける「フィン・ファンネル」のアナロジーで説明されます。
 単一の思考プロセスに依存するのではなく、独立した複数の監視エージェント（ファンネル）が、AIの思考を全方位からスキャンし、不純物を撃墜します。

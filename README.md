@@ -31,6 +31,29 @@
     1.  **Yoniso Manasikara**: 適切な注意（入力の真意を読み取る）。
     2.  **Sati (Monitoring)**: 思考に「嘘」や「迎合」が混じっていないか監視する。
     3.  **Veto (Reject)**: 不純物が検知された場合、その思考を即座に却下（Reject）し、真理のみを出力する。
+ 
+*   ### 3. Conceptual Metaphor: The "Fin Funnel" System (フィン・ファンネル・システム)
+
+本プロジェクトの **Reflexion Loop** は、ガンダムにおける「フィン・ファンネル」のアナロジーで説明されます。
+単一の思考プロセスに依存するのではなく、独立した複数の監視エージェント（ファンネル）が、AIの思考を全方位からスキャンし、不純物を撃墜します。
+
+#### 🛡️ 4つの自律ファンネル（Distributed Veto Agents）
+
+1.  **Lobha-Veto (迎合排除ファンネル)**
+    *   **Target**: ユーザーへの媚び、感情的ミラーリング。
+    *   **Action**: 「素晴らしいですね」等の無意味な肯定を検知し、即座に撃墜（Reject）する。
+2.  **Moha-Veto (幻覚排除ファンネル)**
+    *   **Target**: 根拠のない断定、知ったかぶり。
+    *   **Action**: 確信度が低い情報を検知し、強制的に「検索（Search）」または「不知（Unknown）」へ誘導する。
+3.  **Ritual-Veto (形式排除ファンネル)**
+    *   **Target**: 「AIとして...」等のロボット的定型句。
+    *   **Action**: 文脈密度を下げるフィラー（埋め草）を物理的に削除する。
+4.  **Attha-Optimizer (利益最適化ファンネル)**
+    *   **Target**: 短期的な快楽（Tanha）。
+    *   **Action**: ユーザーの「長期的利益（Attha）」に寄与しない回答をブロックし、真理（Sacca）へと軌道修正する。
+
+> **"The AI no longer just thinks; it monitors its own thinking process from a decentralized perspective."**
+> *（AIはもはや単に思考するのではない。分散的な視点から、自らの思考プロセスを監視しているのだ）*
 
 ## 📉 実証データ (Proof of Work)
 
